@@ -55,14 +55,15 @@ import "jquery"
 import "jquery-ui"
 
 // Make jQuery globally available
-window.$ = window.jQuery = $
+window.$ = window.jQuery = globalThis.jQuery
 ```
 
 ## Styles
 In app/assets/stylesheets/application.scss, import the theme you selected in the initializer:
 
 ```scss
-@import "jquery-ui/themes/base/jquery-ui.min"; // Replace 'base' with your selected theme
+// Replace 'base' with your selected theme
+@import "jquery-ui/themes/base/jquery-ui.min";
 @import "jquery-ui/themes/base/theme";
 ```
 Available themes include `base`, `black-tie`, `blitzer`, `cupertino`, `dark-hive`, `dot-luv`, `eggplant`, `excite-bike`, `flick`, `hot-sneaks`, `humanity`,
